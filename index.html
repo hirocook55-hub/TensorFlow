@@ -12,6 +12,7 @@
     <p id="output_field"> </p>
     
     <script>
+        async function learnLinear(){
         // 線形回帰モデルを定義
 const model = tf.sequential();
 model.add(tf.layers.dense({units: 1, inputShape: [1]}));
@@ -29,6 +30,8 @@ model.fit(xs, ys, {epochs: 10}).then(() => {
   // 結果を確認するためにブラウザのDevToolsを開く
 });
         document.getElementById('output_field'.innerText = model.predict(tf.tensor2d([10],[1,1]));
+                                }
+        learnLinear();
   
 
     </script>
