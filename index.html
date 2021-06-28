@@ -27,7 +27,7 @@ const ys = tf.tensor2d([3, 5, 7, 9], [4, 1]);
 await model.fit(xs, ys, {epochs: 10});
   
             // モデルを使用してモデルが見たことのないデータポイントを推論
-          document.getElementById('output_field'.innerText = model.predict(tf.tensor2d([10],[1,1])));
+          document.getElementById('output_field').innerText = model.predict(tf.tensor2d([10],[1,1]));
                                   }                           
         learnLinear();
     </script>
